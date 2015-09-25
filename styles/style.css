@@ -1,0 +1,80 @@
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+body {
+	background: gray;
+}
+
+hr {display: none;}
+img {border: 0;}
+
+#topo {
+	display: block;
+	padding: 10px;
+	ont: bold Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #3c4274;
+}
+
+#estrutura {
+	width: 700px;
+	background: white;
+	margin: 0 auto;
+}
+
+#conteudo h2 {
+	font: bold 14px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #3c4274;
+}
+
+#conteudo h4 a {
+	display: block;
+	font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #3c4274;
+	margin: 5px;
+	text-decoration: none;
+}
+
+#conteudo {
+	padding: 10px;
+	font: 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #000;
+}
+
+#conteudo p {
+	margin: 5px;
+}
+
+#footer {
+	font: 10px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #000;
+	text-align: center;
+	border-top: 1px solid gray;
+}
+
+form fieldset {
+	width: 550px;
+	border: 0;
+}
+
+form fieldset label, form fieldset input {
+	width: 200px;
+}
+
+form fieldset label {
+	display: block;
+	float: left;
+	margin: 10px;	
+}
+
+a {
+	text-decoration: none;
+	color: black
+}
+
+a:hover {
+	text-decoration: underline;
+	color: blue;
+}
