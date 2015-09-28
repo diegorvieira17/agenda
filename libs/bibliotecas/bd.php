@@ -39,7 +39,7 @@ class Bd {
 		mysql_select_db($this->_bd);
 	}
 
-	public function select($colunas,$tabela,$parametros) {
+	public function select($colunas,$tabela,$parametros="") {
 
 		$sql = "SELECT $colunas FROM $tabela $parametros;";
 		$res = mysql_query($sql);
@@ -66,6 +66,17 @@ class Bd {
 	public function update($tabela,$valores,$id) {
 		$sql = "UPDATE `$tabela` SET $valores WHERE id=$id;";
 		mysql_query($sql);
+	}
+
+	public function get($tabela,$id)
+	{
+		$sql = "SELECT * FROM `$tabela` WHERE id=$id;";
+		$res = mysql_query($sql);
+		$ret = array();
+		if (mysql_num_rows($res)==1) {
+			$ret = mysql_fetch_array($res);
+		}
+		return $ret;
 	}
 
 }

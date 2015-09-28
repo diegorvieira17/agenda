@@ -73,6 +73,19 @@ class Usuario
 	{
 		return $this->_bd->select('*',$this->_tabela,'ORDER BY nome');
 	}
+
+	//  Get - Pega apenas um registro no bd
+	public function get($id)
+	{
+		return $this->_bd->get($this->_tabela,$id);
+	}
+
+	//  Autenticação
+	public function autentica($login,$senha)
+	{
+		$parametros = " WHERE login='$login' AND senha='$senha'";
+		return count($this->_bd->select('login',$this->_tabela,$parametros));
+	}
 }
 
 ?>

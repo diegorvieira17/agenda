@@ -19,6 +19,9 @@ if (!isset($_SESSION['logado']) and $_SERVER['SCRIPT_NAME']!='/auth.php') {
 	header('location: auth.php');
 }
 
+//cria o banco de dados no primeiro acesso com o usuário padrão admin e senha 123
+$sql = 
+
 //conecta ao banco de dados
 $bd = new Bd('localhost','root','123456789','php_agenda');
 $bd->connect();

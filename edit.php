@@ -7,7 +7,7 @@ if (!isset($_REQUEST['edit'])) //verifica se o campo id está preenchido, se nã
 $smarty->assign('edit',$_REQUEST['edit']);  //passa o id para o template
 
  if ($_REQUEST['edit'] > 0) {  //pega os dados do cadastro
-	$dados = get($_REQUEST['edit']);
+	$dados = $agenda->get($_REQUEST['edit']);
 	$smarty->assign('dados',$dados);
 }
 
